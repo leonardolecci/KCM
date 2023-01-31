@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Dati_Bancari" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fe01ae82-abd5-4f64-a1a8-d4ff59cea71a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="10"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset 1" uuid="ed3d29f1-c599-4f6d-b71e-4c6b43ebe66b">
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM conti_correnti]]>
+		</queryString>
+		<field name="codice" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="banca" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="iban" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="bic_swift" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="nazione" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Daniele\\Desktop\\KugoInvoice\\ireport\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM azienda]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rag_soc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="p_iva" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cod_fisc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="indirizzo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="citta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cap" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prov" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nazione" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fax" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sito_web" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Corpo">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		<groupHeader>
+			<band height="230">
+				<staticText>
+					<reportElement x="0" y="22" width="100" height="20" uuid="a2cadc32-9378-4149-b100-ecf4cd62958b"/>
+					<text><![CDATA[Gentili tutti,]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="42" width="555" height="20" uuid="8ef3c04d-29d2-4db7-971d-29e22dfcc42a"/>
+					<text><![CDATA[di seguito indichiamo le nostre coordinate bancarie aggiornate:]]></text>
+				</staticText>
+				<componentElement>
+					<reportElement key="table 2" style="table 2" x="0" y="103" width="555" height="127" uuid="41934dfe-bae6-4fa4-8046-0a62cab60b76"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="New Dataset 1" uuid="1ad8b0fb-5f2a-4543-8f3b-de383cab94e2">
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+						<jr:column width="120" uuid="cae78b05-e3bd-4411-83f7-08fa9536f380">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="120" height="30" uuid="bd306571-304b-4ad1-a0cc-5340c1c75711"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[BANCA]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+								<textField>
+									<reportElement x="0" y="0" width="120" height="20" uuid="3691a6bd-ca46-4802-9cfb-5fc2bdd4d9b7"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$F{banca}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="334" uuid="1c7c0df9-99fa-49ad-872a-232dcd955fa1">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="334" height="30" uuid="bd59af74-ebac-4973-bae1-8a42777c360c"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[IBAN]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+								<textField>
+									<reportElement x="0" y="0" width="334" height="20" uuid="be09d210-5423-44e5-9634-77741b1901bb"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$F{iban}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="100" uuid="1d6d8fb2-290c-48bd-ab13-2353750fb04e">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="0.5"/>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="100" height="30" uuid="b4049f24-f0ad-4bf3-ac9b-f5d065cc111a"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[SWIFT]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+								<textField>
+									<reportElement x="0" y="0" width="100" height="20" uuid="7fa0483c-60d7-4654-84a8-93c6b31b2779"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<textFieldExpression><![CDATA[$F{bic_swift}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement x="0" y="0" width="100" height="20" uuid="19329f0b-a101-4cc3-8adf-25a858df322c"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="115" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="200" height="53" uuid="a35acaa1-8d15-4d96-ad63-580d7e9cf80c"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Fattura_Vendita_img.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="355" y="0" width="200" height="15" uuid="d553223e-e3bf-42a6-a8fe-90485a0e4db4"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Fattura_Vendita_riga1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="355" y="15" width="200" height="15" uuid="9aca02f4-7545-4dbf-887b-9c6ab7e52ed0"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Fattura_Vendita_riga2.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="355" y="30" width="200" height="15" uuid="fc1612dc-5f8a-4b75-b36b-eca6008c42a1"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Fattura_Vendita_riga3.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="355" y="45" width="200" height="15" uuid="5ba4ab5b-effd-4a88-9c6d-97d184a9a42d"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Fattura_Vendita_riga4.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="355" y="60" width="200" height="15" uuid="be76524a-7277-4661-ad3d-8cafc809d705"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Fattura_Vendita_riga5.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="355" y="75" width="200" height="15" uuid="dce724e1-a492-44f3-9c87-e3d5042b1dea"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Fattura_Vendita_riga6.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="355" y="90" width="200" height="18" uuid="f5a973e4-a5d8-4020-8f04-071259c1e96d"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Fattura_Vendita_riga7.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="435" y="0" width="80" height="20" uuid="fb125225-841b-4dc6-bc31-6a4b3762fa70"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="0" width="40" height="20" uuid="cd53d37c-c32a-4351-aff9-cb2189707fa1"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

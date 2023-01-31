@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Fattura_Vendita_img" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d8846b21-1986-4fba-b462-6367ad5ce95c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT (valore) as img_src FROM opzioni WHERE chiave='logo']]>
+	</queryString>
+	<field name="img_src" class="java.lang.String"/>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="215" height="50" uuid="df592221-ea06-4c30-aec3-69d32178f6cb"/>
+				<imageExpression><![CDATA[$F{img_src}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

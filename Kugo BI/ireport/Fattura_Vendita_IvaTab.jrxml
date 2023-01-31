@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Fattura_Vendita_IvaTab" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="0c5e8335-8c97-4361-a846-5a26b31fdfbe">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM opzioni o, codici_iva c WHERE o.valore=c.codice]]>
+	</queryString>
+	<field name="codice" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="percentuale" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descrizione" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="50" height="20" uuid="6fbb1f96-511c-438d-b78e-596a97cc4383"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="25" height="20" uuid="24e383b3-2da2-4d63-92db-e02aa7024bec"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[C. IVA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="25" y="0" width="25" height="20" uuid="d7892780-c347-4bb2-bb61-39a3eb3f1b05"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codice}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="50" y="0" width="45" height="20" uuid="2c6106cb-0735-49d5-be5d-b4021519e1ea"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="50" y="0" width="25" height="20" uuid="bf3f23ad-b3a4-4c16-8616-2ab02769e54d"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[% IVA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="75" y="0" width="20" height="20" uuid="2df55c37-a757-418f-bc1f-5958c7ab9136"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{percentuale}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="95" y="0" width="149" height="20" uuid="962bf7c0-bd21-4c94-8e13-c79f7d5380eb"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="95" y="0" width="26" height="20" uuid="fbd334f8-d5bb-4d3d-8f59-6c2a6cdabdda"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DESC.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="121" y="0" width="123" height="20" uuid="ad54352f-fb37-4227-8c92-e952ddc9ba6f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{descrizione}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

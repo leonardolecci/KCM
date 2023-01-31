@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Fattura_Vendita_riga6" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fb3a39c6-9fc3-413a-a767-a161791d1a3f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT valore as riga6  FROM opzioni WHERE chiave='riga6']]>
+	</queryString>
+	<field name="riga6" class="java.lang.String"/>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="287" height="20" uuid="6a4b0a94-77e8-4867-b0ac-63175e83d478"/>
+				<textFieldExpression><![CDATA[$F{riga6}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
